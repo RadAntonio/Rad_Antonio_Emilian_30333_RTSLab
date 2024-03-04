@@ -5,8 +5,6 @@ public class ComplexCalculator {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Welcome to Complex Number Calculator!");
-        System.out.println("Menu:");
         System.out.println("1. Addition");
         System.out.println("2. Subtraction");
         System.out.println("3. Multiplication");
@@ -16,13 +14,13 @@ public class ComplexCalculator {
 
         switch (choice) {
             case 1:
-                performAddition();
+                Addition();
                 break;
             case 2:
-                performSubtraction();
+                Subtraction();
                 break;
             case 3:
-                performMultiplication();
+                Multiplication();
                 break;
             default:
                 System.out.println("Invalid choice!");
@@ -31,21 +29,21 @@ public class ComplexCalculator {
         scanner.close();
     }
 
-    private static void performAddition() {
+    private static void Addition() {
         ComplexNumber num1 = new ComplexNumber(2, 5);
         ComplexNumber num2 = new ComplexNumber(4, -1);
         ComplexNumber result = num1.add(num2);
         System.out.println("Result of addition: " + result);
     }
 
-    private static void performSubtraction() {
+    private static void Subtraction() {
         ComplexNumber num1 = new ComplexNumber(2, 5);
         ComplexNumber num2 = new ComplexNumber(4, -1);
         ComplexNumber result = num1.subtract(num2);
         System.out.println("Result of subtraction: " + result);
     }
 
-    private static void performMultiplication() {
+    private static void Multiplication() {
         ComplexNumber num1 = new ComplexNumber(2, 5);
         ComplexNumber num2 = new ComplexNumber(4, -1);
         ComplexNumber result = num1.multiply(num2);
